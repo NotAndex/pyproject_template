@@ -26,4 +26,4 @@ def write_logs(request):
     # enable the logger
     logger.remove()
     logger.configure(handlers=[{"sink": log_path, "level": "TRACE", "mode": "w"}])
-    logger.enable("src")
+    logger.enable("transformation_1")
