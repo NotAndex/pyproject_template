@@ -6,7 +6,7 @@ import pytest
 @pytest.fixture(autouse=True)
 def write_logs(request):
     # put logs in tests/logs
-    log_path = Path("integration_tests") / "logs"
+    log_path = Path("tests/integration_tests") / "logs"
 
     # tidy logs in subdirectories based on test module and class names
     module = request.module
