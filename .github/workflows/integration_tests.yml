@@ -27,12 +27,3 @@ jobs:
         run: |
           pytest tests/integration_tests
 
-
-      - name: Archive tests logs
-        uses: actions/upload-artifact@v2
-        if: ${{ failure() }}
-        with:
-          name: tests-logs-${{ matrix.os }}-py${{ matrix.python-version }}
-          path: |
-            tests/integration_tests/logs
-          retention-days: 7
