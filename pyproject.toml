@@ -5,10 +5,12 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "pyproject-template"
 description = "My package description"
-author = "Andreas Schreiber"
+author = [
+    {name = "Andreas Schreiber", email = "andi@example.com"},
+    ]
 license = {text = "MIT"}
 readme = "README.md"
-requires-python = ">=3.7"
+requires-python = ">=3.6"
 classifiers = [
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.9",
