@@ -3,9 +3,9 @@ requires = ["setuptools>=42.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "pyproject-template"
+name = "pyproject_template"
 version = "0.0.1"
-description = "My package description"
+description = "Just a template"
 authors = [
     {name = "Andreas Schreiber", email = "andi@example.com"},
     ]
@@ -15,7 +15,7 @@ requires-python = ">=3.6"
 classifiers = [
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.9",
-    "Programming Language :: Python :: 3.10"
+    "Programming Language :: Python :: 3.10",
     ]
 
 [tool.pytest.ini_options]
