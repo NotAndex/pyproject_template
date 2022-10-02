@@ -2,7 +2,6 @@
 requires = ["setuptools>=42.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
-
 [project]
 name = "pyproject-template"
 version = "0.0.1"
@@ -10,7 +9,7 @@ description = "My package description"
 authors = [
     {name = "Andreas Schreiber", email = "andi@example.com"},
     ]
-license = "MIT"
+license = {text = "MIT"}
 readme = "README.md"
 requires-python = ">=3.6"
 classifiers = [
@@ -18,7 +17,6 @@ classifiers = [
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10"
     ]
-
 
 [tool.pytest.ini_options]
 testpaths = [
