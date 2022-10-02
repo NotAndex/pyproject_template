@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "pyproject-template"
 description = "My package description"
-author = [
+authors = [
     {name = "Andreas Schreiber", email = "andi@example.com"},
     ]
 license = {text = "MIT"}
