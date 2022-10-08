@@ -5,7 +5,8 @@ from transformation_1.step_1 import addition
 
 
 def test_subtraction():
-    assert subtraction(2,2) is 0
+    assert subtraction(2, 2) is 0
+
 
 def test_addition():
-    assert addition(2,2) is 4
+    assert addition(2, 2) is 4
