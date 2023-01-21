@@ -3,7 +3,7 @@ name: unit tests
 on:
   push:
     paths:
-      - "src"
+      - "src/**"
       - "tests"
   pull_request:
     paths:
