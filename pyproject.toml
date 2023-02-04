@@ -5,27 +5,21 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "pyproject_template"
 version = "0.0.1"
-authors = [
-    {name = "Andreas Schreiber", email = "andi@example.com"},
-    ]
+authors = [{ name = "Andreas Schreiber", email = "andi@example.com" }]
 description = "Just a template"
-license = {text = "MIT"}
+license = { text = "MIT" }
 readme = "README.md"
-requires-python = ">=3.6"
+requires-python = ">=3.9"
 classifiers = [
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
-    ]
-dependencies = [
-    "numpy",
-    "pandas",
-    ]
+    "Programming Language :: Python :: 3.11",
+]
+dependencies = ["numpy", "pandas"]
 
 [tool.setuptools]
-package-dir = {"" = "src"}
+package-dir = { "" = "src" }
 
 [tool.pytest.ini_options]
-testpaths = [
-    "tests/unit_tests",
-]
+testpaths = ["tests/unit_tests"]

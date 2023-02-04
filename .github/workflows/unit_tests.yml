@@ -4,19 +4,19 @@ on:
   push:
     paths:
       - "src/**"
-      - "tests"
+      - "tests/unit_tests/**"
   pull_request:
     paths:
-      - "src"
-      - "tests"
-
+      - "src/**"
+      - "tests/unit_tests/**"
+      
 jobs:
   test:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
         os: [ubuntu-latest]
-        python-version: ["3.9", "3.10"]
+        python-version: ["3.9", "3.10","3.11"]
 
     steps:
       - uses: actions/checkout@v3
