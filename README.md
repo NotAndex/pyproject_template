@@ -6,8 +6,32 @@ This repository serves as a template for Python projects with the following goal
 * Reproducibility and shareability
 * Local (tox) & Remote (GitHub Actions) unit and integration testing
 
-## `pyproject.toml`
+## TODO
+* Add precommit hook  
+  * Linting with Ruff
+  * Formatting with Black
+
+## `src`
 ...
+
+## `tests`
+...
+
+## `pyproject.toml`
+
+### `[build-system]`
+...
+
+### `[project]`
+...
+
+### `[project.scripts]`
+A Entrypoint can be added to the package, by adding the following lines
+```toml
+[project.scripts]
+entrypoint = "main:main"
+```
+After installing the package, a user may invoke the function by simply calling the entry point on the command line. The entry point can be extended by adding an argument parser to the script using argparse.
 
 ## `.devcontainer/`
 
