@@ -9,14 +9,15 @@ on:
     paths:
       - "src/**"
       - "tests/unit_tests/**"
-      
+  workflow_dispatch:
+
 jobs:
   test:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
         os: [ubuntu-latest]
-        python-version: ["3.9", "3.10","3.11"]
+        python-version: ["3.10", "3.11", "3.12"]
 
     steps:
       - uses: actions/checkout@v3
