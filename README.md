@@ -20,8 +20,7 @@ This repository serves as a template for Python projects with the following goal
 ## `pyproject.toml`
 
 ### `[build-system]`
-...
-
+Interesting read: [source](https://discuss.python.org/t/user-experience-with-porting-off-setup-py/37502/33)
 ### `[project]`
 ...
 
