@@ -12,11 +12,11 @@ jobs:
       - name: Set up Python 3.8
         uses: actions/setup-python@v4
         with:
-          python-version: 3.8
+          python-version: 3.10
       - name: Cache python packages
         uses: actions/cache@v3
         with:
-          path: ${{ env.Python3_ROOT_DIR }}/lib/python3.8/site-packages
+          path: ${{ env.Python3_ROOT_DIR }}/lib/python3.10/site-packages
           key: test-packages-${{ hashFiles('**/pyproject.toml') }}-3.8
       - name: Install dependencies
         run: |
