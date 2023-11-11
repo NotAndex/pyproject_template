@@ -16,10 +16,48 @@ classifiers = [
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
 ]
-dependencies = ["numpy", "pandas"]
+dependencies = [
+    "numpy",
+    "requests",
+    "tqdm",
+    "networkx",
+    "pyopencl",
+    "pyobjc-framework-Metal; platform_system=='Darwin'",
+    "pyobjc-framework-Cocoa; platform_system=='Darwin'",
+    "pyobjc-framework-libdispatch; platform_system=='Darwin'",
+]
 
 [project.optional-dependencies]
-testing = ["pytest"]
+triton = ["triton-nightly>=2.1.0.dev20231014192330", "pycuda"]
+llvm = ["llvmlite"]
+cuda = ["pycuda"]
+arm = ["unicorn"]
+webgpu = ["wgpu"]
+linting = [
+    "flake8",
+    "pylint",
+    "mypy",
+    "typing-extensions",
+    "pre-commit",
+    "ruff",
+    "types-tqdm",
+]
+testing = [
+    "torch",
+    "pillow",
+    "pytest",
+    "pytest-xdist",
+    "onnx==1.15.0",
+    "onnx2torch",
+    "opencv-python",
+    "tabulate",
+    "safetensors",
+    "cloudpickle",
+    "transformers",
+    "sentencepiece",
+    "tiktoken",
+    "librosa",
+]
 
 [tool.setuptools]
 package-dir = { "" = "src" }
