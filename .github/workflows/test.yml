@@ -20,7 +20,7 @@ jobs:
       - name: Install dependencies
         run: pip install -e '.[linting,testing]' --extra-index-url https://download.pytorch.org/whl/cpu
       - name: Test with pytest
-        run: pytest
+        run: python -m pytest
 
   testcpuimagenet:
     runs-on: ubuntu-latest
@@ -38,7 +38,7 @@ jobs:
       - name: Install dependencies
         run: pip install -e '.[testing]' --extra-index-url https://download.pytorch.org/whl/cpu
       - name: Test with pytest
-        run: pytest
+        run: python -m pytest
 
   testmetalwebgpu:
     runs-on: ubuntu-latest
