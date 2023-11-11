@@ -16,10 +16,10 @@ classifiers = [
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
 ]
-dependencies = ["numpy"]
+dependencies = ["numpy", "pandas"]
 
-[project.optional-dependencies]
-testing = ["pandas"]
+# [project.optional-dependencies]
+# testing = ["pytest"]
 
 [tool.setuptools]
 package-dir = { "" = "src" }
