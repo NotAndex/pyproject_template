@@ -18,6 +18,9 @@ classifiers = [
 ]
 dependencies = ["numpy", "pandas"]
 
+[project.optional-dependencies]
+testing = ["pytest"]
+
 [tool.setuptools]
 package-dir = { "" = "src" }
 
