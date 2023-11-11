@@ -19,6 +19,6 @@ jobs:
           path: ${{ env.Python3_ROOT_DIR }}/lib/python3.8/site-packages
           key: test-packages-${{ hashFiles('**/pyproject.toml') }}-3.8
       - name: Install dependencies
-        run: pip install -e '.[testing]'
+        run: pip install -e .[testing]
       - name: Test with pytest
         run: pytest
