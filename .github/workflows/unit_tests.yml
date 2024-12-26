@@ -31,9 +31,14 @@ jobs:
           python-version: ${{ matrix.python-version }}
 
       - name: Install tox
-        run: uv tool install --python-preference only-managed --python 3.13 tox --with tox-uv --with tox-gh
+        run: uv tool install tox --with tox-uv --with tox-gh
 
-      - name: Test with tox
+      - name: Setup test suite
+        run: tox run -vv --notest --skip-missing-interpreters false
+        env:
+          TOX_GH_MAJOR_MINOR: ${{ matrix.env }}
+
+      - name: Run test suite
         run: tox run --skip-pkg-install
         env:
           TOX_GH_MAJOR_MINOR: ${{ matrix.env }}
