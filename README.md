@@ -6,11 +6,6 @@ This repository serves as a template for Python projects with the following goal
 * Reproducibility and shareability
 * Local (tox) & Remote (GitHub Actions) unit and integration testing
 
-## TODO
-* Add precommit hook  
-  * Linting with Ruff
-  * Formatting with Black
-
 ## `src`
 ...
 
