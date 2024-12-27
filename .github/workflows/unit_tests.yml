@@ -12,6 +12,17 @@ on:
   workflow_dispatch:
 
 jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/ruff-action@v2
+        with:
+          src: "./src"
+          version: "latest"
+      - run: ruff check --fix
+      - run: ruff format
+
   test:
     runs-on: ${{ matrix.os }}
     strategy:
