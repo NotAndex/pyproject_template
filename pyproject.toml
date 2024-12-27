@@ -18,8 +18,9 @@ classifiers = [
 ]
 dependencies = ["numpy", "pandas"]
 
-[project.optional-dependencies]
-testing = ["pytest", "tox"]
+# https://docs.astral.sh/uv/concepts/projects/dependencies/#dependency-groups
+[dependency-groups]
+dev = ["pytest", "tox-uv"]
 
 [tool.setuptools]
 package-dir = { "" = "src" }
