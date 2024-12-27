@@ -20,8 +20,8 @@ jobs:
         with:
           src: "./src"
           version: "latest"
-      - run: ruff check --fix
-      - run: ruff format
+          args: "check --fix --format-check"
+     
 
   test:
     runs-on: ${{ matrix.os }}
