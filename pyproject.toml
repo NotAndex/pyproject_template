@@ -21,6 +21,14 @@ dependencies = ["numpy", "pandas"]
 # https://docs.astral.sh/uv/concepts/projects/dependencies/#dependency-groups
 [dependency-groups]
 dev = ["pytest", "tox-uv"]
+lint = ["ruff", "pre-commit"]
+
+[tool.uv]
+default-groups = ["dev", "lint"]
+
+[tool.ruff]
+line-length = 160
+include = ["pyproject.toml", "src/**/*.py"]
 
 [tool.setuptools]
 package-dir = { "" = "src" }
