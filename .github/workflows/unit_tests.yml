@@ -20,7 +20,8 @@ jobs:
         with:
           src: "./src"
           version: "latest"
-          args: "check --fix --format-check"
+      - run: ruff check --fix
+      - run: ruff format
      
 
   test:
