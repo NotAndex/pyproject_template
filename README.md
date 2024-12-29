@@ -6,6 +6,18 @@ This repository serves as a template for Python projects with the following goal
 * Reproducibility and shareability
 * Local (tox) & Remote (GitHub Actions) unit and integration testing
 
+# Local Installation
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+uv python install
+uv sync
+source .venv/bin/activate
+```
+
+# Dev Container
+...
+
+# Project Overview
 ## `src`
 ...
 
