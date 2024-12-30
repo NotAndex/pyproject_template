@@ -16,25 +16,28 @@ classifiers = [
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
 ]
-dependencies = ["numpy", "pandas"]
 
-# https://docs.astral.sh/uv/concepts/projects/dependencies/#dependency-groups
-[dependency-groups]
-dev = ["pytest", "tox-uv"]
-lint = ["ruff", "pre-commit"]
+dependencies = ["numpy", "pandas"]
 
 [tool.uv]
 default-groups = ["dev", "lint"]
 
-[tool.ruff]
+[dependency-groups] # https://docs.astral.sh/uv/concepts/projects/dependencies/#dependency-groups
+dev = ["pytest", "tox-uv"]
+lint = ["ruff", "pre-commit"]
+
+
+[tool.ruff] # lint
 line-length = 160
 include = ["pyproject.toml", "src/**/*.py"]
+
+
+[tool.pytest.ini_options] # test
+testpaths = ["tests/unit_tests"]
+
 
 [tool.setuptools]
 package-dir = { "" = "src" }
 
 [project.scripts]
 entrypoint = "main:main"
-
-[tool.pytest.ini_options]
-testpaths = ["tests/unit_tests"]
