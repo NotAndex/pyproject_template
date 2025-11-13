@@ -9,32 +9,29 @@ authors = [{ name = "Andreas Schreiber", email = "andi@example.com" }]
 description = "Just a template"
 license = { text = "MIT" }
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.12"
 classifiers = [
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
 ]
-
 dependencies = ["numpy", "pandas"]
 
 [tool.uv]
-default-groups = ["dev", "lint"]
+default-groups = ["dev", "lint", "jupyter"]
 
 [dependency-groups] # https://docs.astral.sh/uv/concepts/projects/dependencies/#dependency-groups
 dev = ["pytest", "tox-uv"]
 lint = ["ruff", "pre-commit"]
-
+jupyter = ["ipykernel"]
 
 [tool.ruff] # lint
 line-length = 160
 include = ["pyproject.toml", "src/**/*.py"]
 
-
 [tool.pytest.ini_options] # test
 testpaths = ["tests/unit_tests"]
-
 
 [tool.setuptools]
 package-dir = { "" = "src" }
