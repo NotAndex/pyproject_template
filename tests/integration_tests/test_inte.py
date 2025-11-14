@@ -1,10 +1,9 @@
-from transformation_1.step_1 import addition
-from transformation_2.step_1 import subtraction
+from module_a.simple_math import add, sub
 
 
 def test_subtraction():
-    assert subtraction(2, 2) == 0
+    assert sub(2, 2) == 0
 
 
 def test_addition():
-    assert addition(2, 2) == 4
+    assert add(2, 2) == 4

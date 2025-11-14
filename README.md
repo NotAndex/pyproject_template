@@ -32,12 +32,12 @@ Interesting read: [[1]](https://discuss.python.org/t/user-experience-with-portin
 ...
 
 ### `[project.scripts]`
-A Entrypoint can be added to the package, by adding the following lines
 ```toml
 [project.scripts]
 entrypoint = "main:main"
 ```
-After installing the package, a user may invoke the function by simply calling the entry point on the command line. The entry point can be extended by adding an argument parser to the script using argparse.
+After installing the package, a user may invoke the function by simply calling the entry point on the command line: `uv run entrypoint`
+
 
 ## `.devcontainer/`
 
