@@ -1,5 +1,5 @@
-from transformation_1.step_1 import addition
+from module_a.simple_math import add
 
 
-def test_addition():
-    assert addition(2, 2) == 4
+def test_add():
+    assert add(2, 2) == 4
